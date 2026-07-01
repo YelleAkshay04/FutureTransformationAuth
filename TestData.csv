@@ -1,0 +1,11 @@
+Name,Email,Password,Scenario
+Akshay,akshay@gmail.com,Password1234,Valid
+Akshay,duplicate@gmail.com,Password1234,Duplicate
+Test,abc,Password1234,Invalid Email
+Test,user@gmail.com,Password123,Weak Password
+Ákshay,unicode@gmail.com,Password1234,Unicode
+Space, test@gmail.com ,Password1234,Spaces
+Upper,USER@MAIL.COM,Password1234,Uppercase
+Blank,,Password1234,Blank Email
+BlankPwd,user2@gmail.com,,Blank Password
+Mismatch,user3@gmail.com,Password1234 / Password9999,Mismatch
