@@ -1,11 +1,11 @@
-Name,Email,Password,Scenario
-Akshay,akshay@gmail.com,Password1234,Valid
-Akshay,duplicate@gmail.com,Password1234,Duplicate
-Test,abc,Password1234,Invalid Email
-Test,user@gmail.com,Password123,Weak Password
-Ákshay,unicode@gmail.com,Password1234,Unicode
-Space, test@gmail.com ,Password1234,Spaces
-Upper,USER@MAIL.COM,Password1234,Uppercase
-Blank,,Password1234,Blank Email
-BlankPwd,user2@gmail.com,,Blank Password
-Mismatch,user3@gmail.com,Password1234 / Password9999,Mismatch
+Test Case ID,Name,Email,Password,Confirm Password,Scenario,Expected Result
+TD-001,Akshay Kumar,akshay@example.com,Password1234,Password1234,Valid Registration,201 Created
+TD-002,Rahul Sharma,akshay@example.com,Password1234,Password1234,Duplicate Email,409 Conflict
+TD-003,John Doe,johnexample.com,Password1234,Password1234,Invalid Email Format,400 Bad Request
+TD-004,Sara Khan,sara@example.com,password,password,Weak Password,400 Bad Request
+TD-005,José Álvarez,jose@example.com,Password1234,Password1234,Unicode Characters,201 Created
+TD-006,  Priya  ,  priya@example.com  ,Password1234,Password1234,Leading/Trailing Spaces,Spaces trimmed and accepted
+TD-007,Abcd,abcd@example.com,Password1234,Password1234,Name أقل than 5 characters,400 Bad Request
+TD-008,ABCDEFGHIJKLMNOPQRSTUVWX,longname@example.com,Password1234,Password1234,Maximum Name Length (24 chars),201 Created
+TD-009,Akshay User,USER@EXAMPLE.COM,Password1234,Password1234,Uppercase Email,Stored as lowercase
+TD-010,Demo User,demo@example.com,Password1234,Password4321,Password Mismatch,400 Bad Request
